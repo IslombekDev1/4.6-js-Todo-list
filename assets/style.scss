@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+}
+
+.todolist-container{
+  width: 550px;
+  min-height: 700px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: #64646f33 0 0 29px 0;
+  
+  .todolist__form-wrapper{
+    width: 100%;
+    height: 170px;
+    padding: 1rem;
+    box-shadow: #64646f33 0 0 29px 0;
+
+    form{
+      display: flex;
+      gap: 20px;
+      box-shadow: #64646f33 0 0 29px 0;
+
+      .todolis__box{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        border: 2px solid #cbcbcb;
+        .todolist__form-input{
+          flex: 1;
+          padding: 1rem 0;
+          text-indent: 10px;
+          border: none;
+          font-size: 18px;
+          outline: none;
+        }
+        i{
+          display: none;
+          margin-right: 15%;
+        }
+        
+      }
+
+      .todolist__form-submit{
+        font-size: 18px;
+        color:white;
+        border-radius: 5px;
+        padding: 0 20px;
+        border: none;
+        background-color: #008000a3;
+        &:active{
+          transform: scale(1.1);
+        }
+      }
+    }
+    .todolist__form-delete-all{
+      margin-top: 30px;
+      font-size: 18px;
+      padding: 16px 20px;
+      color:white;
+      border-radius: 5px;
+      border: none;
+      background-color: #fc3f3f;
+      &:active{
+        transform: scale(1.1);
+      }
+    }
+  }
+  #todolist__collection{
+    margin-top: 30px;
+    max-height: 500px;
+    display: grid;
+    gap: 15px;
+    padding: 10px 1rem;
+    overflow: auto;
+  }
+  .collection__item{
+    padding: 1rem;
+    box-shadow: #64646f33 0 0 29px 0;
+    animation: bounce 0.5s ease-in-out;
+    
+    @keyframes bounce {
+      0%{
+        transform: scale(0);
+      }
+      20%{
+        transform: scale(1);
+      }
+      40%{
+        transform: scale(0.8);
+      }
+      60%{
+        transform: scale(1);
+      }
+      80%{
+        transform: scale(0.9);
+      }
+      100%{
+        transform: scale(1);
+      }
+    }
+    p{
+      padding: 10px;
+      border: 1px solid transparent;
+    }
+    p[contenteditable]{
+      border: 1px solid gray;
+      outline: none;
+    }
+    li{
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+  }
+  .btn{
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    color:white;
+    &:hover{
+      opacity: 0.8;
+    }
+    &:active{
+      transform: scale(1.05);
+    }
+    i{
+      font-size: 20px;
+      pointer-events: none;
+      margin-bottom: 5px;
+    }
+  }
+  .btn-complete{
+    background-color: #008000a3;
+  }
+  .completed{
+    background-color: #008000a3;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: linen;
+  }
+  .btn-edit{
+    background-color: gold;
+  }
+  .btn-time{
+    background-color: #1B8DFF;
+  }
+  .btn-delete{
+    background-color: #F4373A;
+  }
+}
+.style-todolist-box{
+  border: 2px solid #008000a3;
+  box-shadow: 0 0 0 4px #00800064;
+  outline:none;
+  transition: all 0.5s ease-out;
+}
