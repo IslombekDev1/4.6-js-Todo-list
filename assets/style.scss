@@ -49,6 +49,11 @@ body{
         i{
           display: none;
           margin-right: 15%;
+          color:red;
+          font-size: 20px;
+          &:active{
+            transform: scale(1.3);
+          }
         }
         
       }
